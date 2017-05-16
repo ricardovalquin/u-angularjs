@@ -8,6 +8,8 @@
   /** @ngInject */
   function HomeController($log, SITE_NAME) {
     var vm = this;
+    console.log('from the dashboard');
+
     vm.mainTitle = SITE_NAME;
     vm.signUpToday = signUpToday;
 

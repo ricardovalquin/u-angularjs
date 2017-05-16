@@ -1,0 +1,23 @@
+<div class="login-wp">
+  <div class="centered-elements">
+    <form class="login-form" name="loginForm">
+      <div class="logo-wp">
+        <img src="/assets/images/talos-logo.png" alt="">
+      </div>
+      <div class="form-group">
+        <label for="email" class="label-form">E-mail:</label>
+        <input class="input-form" type="email" id="email" ng-model="loginCtrl.formData.email" required/>
+      </div>
+      <div class="form-group">
+        <label for="password" class="label-form">Password:</label>
+        <input class="input-form" type="password" id="password" ng-model="loginCtrl.formData.password" required/>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-success"
+                ng-click="loginCtrl.submitForm()" ng-disabled="!loginCtrl.formData.email ||
+                 !loginCtrl.formData.email">Login</button>
+      </div>
+    </form>
+  </div>
+
+</div>
