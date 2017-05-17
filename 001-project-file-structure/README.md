@@ -16,6 +16,36 @@ Perform the following in the current example:
 
 ### Solution
 
+This implementation is based on the Angular style guide [5] by johnpapa.
+One of the main changes made here was the creation of a base abstract state for the app
+then, all the views that belongs to the app are sub states of this states
+container and allows to have common elements (the nested views) without 
+duplicating code (using the TDRY concept ). Views as the login page are
+not sub states of this one because it not has common components as the other ones.
+ 
+
+Folder structure:
+starting by the app folder, we have the components folder which contains:
+  - commons (for shared components between views).
+  - constants (for constants like url server, language constants).
+  - directives (the directives are not part of any state, they are reusable components that can be used across the whole application)
+  - services (the services can be used in any state, then they can not be part of the state itself)
+  
+after components is the config folder which contains the language configuration for the angular translate module.
+in this file you can specify the route for the different translation files that you will use.
+
+finaly, we have the states folder that contains all the diferent states for the application
+in this case, we have home and login states, inside their folders you can find all the files that compose an state:
+  - the lang folder (wich contains .json files with the translation texts).
+  - _stateName.scss (partial scss file for the styles of the view).
+  - stateName.controller.js (the controller for the view).
+  - stateName.controller.spec.js (unit tests file for the controller).
+  - stateName.html (html file for the view of the state).
+  - stateName.route.js (route file that specify the url, pre loaded data and resources that the state needs to resolve before render it).
+  - stateName.route.js (unit testing for the route file).
+  - subStateName folder (if a state have nested states, they have to go here and the files are the same, exept by the route that can be defined on the parent state).
+  
+
 If you want to see the solution, click [here][3].
 
 ### Next
@@ -25,3 +55,4 @@ If you want to see the solution, click [here][3].
  [2]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#style-y150
  [3]: https://github.com/talosdigital/u-angularjs/tree/solved/001-projec-file-structure/001-project-file-structure#solution
  [4]: https://github.com/talosdigital/u-angularjs/tree/master/002-routing-params-views
+ [5]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md

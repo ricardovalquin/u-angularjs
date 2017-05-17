@@ -7,15 +7,25 @@
 
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state('home', {
-        url: '/',
-        templateUrl: 'app/states/home/home.html',
-        controller: 'HomeController',
-        controllerAs: 'homeCtrl'
-      });
+    $stateProvider.state('app', {
+      abstract: true,
+      views: {
+        //'nav@' : {
+        //  templateUrl: 'app/components/commons/nav/nav.html',
+        //  controller: 'NavController',
+        //  controllerAs: 'navCtrl'
+        //},
+        'content@': {
+          templateUrl: 'app/components/commons/content/content.html'
+        },
+        'footer@': {
+          templateUrl: 'app/components/commons/footer/footer.html',
+          controller: 'FooterController',
+          controllerAs: 'footerCtrl'
+        }
+      }
+    });
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/login');
   }
-
 })();
