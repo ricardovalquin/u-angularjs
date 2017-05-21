@@ -6,11 +6,12 @@
     .controller('HomeController', HomeController);
 
   /** @ngInject */
-  function HomeController($log, SITE_NAME) {
+  function HomeController($log, SITE_NAME, loggedUser) {
     var vm = this;
-    console.log('from the dashboard');
 
     vm.mainTitle = SITE_NAME;
+    vm.user = loggedUser;
+    console.log(vm.user);
     vm.signUpToday = signUpToday;
 
     function signUpToday(){
