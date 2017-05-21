@@ -6,7 +6,7 @@
     .service('LoginService', LoginService);
 
   /** @ngInject */
-  function LoginService($q) {
+  function LoginService($q, Auth) {
 
     return {
       login: login,
@@ -17,12 +17,17 @@
       if (!userData.email || !userData.password) {
         return $q.reject('missing data');
       }
-      var data = {
-        status: 200,
-        user: userData,
-        session: 123456789
-      };
-      return $q.resolve(data);
+
+      if(Auth.logIn(userData)) {
+        var data = {
+          status: 200,
+          user: userData,
+          session: 123456789
+        };
+        return $q.resolve(data);
+      } else {
+        return $q.reject('login failed');
+      }
     }
 
     function logout() {

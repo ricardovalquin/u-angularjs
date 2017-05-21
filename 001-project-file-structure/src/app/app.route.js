@@ -10,11 +10,6 @@
     $stateProvider.state('app', {
       abstract: true,
       views: {
-        //'nav@' : {
-        //  templateUrl: 'app/components/commons/nav/nav.html',
-        //  controller: 'NavController',
-        //  controllerAs: 'navCtrl'
-        //},
         'content@': {
           templateUrl: 'app/components/commons/content/content.html'
         },
