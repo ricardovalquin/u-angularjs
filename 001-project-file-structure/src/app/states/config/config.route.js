@@ -14,17 +14,13 @@
           controller: 'ConfigController',
           controllerAs: 'configCtrl'
         }
-      }//,
-      //resolve: {
-      //  /** @ngInject */
-      //  loggedUser: function ($state, Auth) {
-      //    var currentUser = Auth.currentUser();
-      //    if(currentUser && currentUser.email != undefined) {
-      //      return currentUser;
-      //    }
-      //    $state.go('login');
-      //  }
-      //}
+      },
+      resolve: {
+        /** @ngInject */
+        configData: function (StaticDataService) {
+          return StaticDataService.getConfigFile();
+        }
+      }
     });
   }
 

@@ -1,3 +1,8 @@
-<section class="config-view">
-  <h1>config view</h1>
+<nav-bar active-link="configCtrl.active" user="configCtrl.user" click-link="configCtrl.changeCategory(category)"></nav-bar>
+<section class="home-view d-flex align-items-center">
+  <div class="jumbotron">
+    <h1 class="display-3">{{configCtrl.mainTitle}}</h1>
+    <h2>Config view</h2>
+    <p class="lead">This is just a test for the config view using nested states.</p>
+  </div>
 </section>

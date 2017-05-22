@@ -12,7 +12,8 @@
     vm.factory = {
       registerUser: registerUser,
       logIn:logIn,
-      currentUser: currentUser
+      currentUser: currentUser,
+      logOut: logOut
     };
 
     function registerUser(newUser){
@@ -66,8 +67,9 @@
       return current;
     }
 
-    function logOut(user){
-      //...
+    function logOut(){
+      localStorage.removeItem('userList');
+      vm.users = [];
     }
 
     return vm.factory;

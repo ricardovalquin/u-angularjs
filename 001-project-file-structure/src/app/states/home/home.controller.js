@@ -6,17 +6,15 @@
     .controller('HomeController', HomeController);
 
   /** @ngInject */
-  function HomeController($log, SITE_NAME, loggedUser) {
+  function HomeController(SITE_NAME, loggedUser) {
     var vm = this;
 
     vm.mainTitle = SITE_NAME;
     vm.user = loggedUser;
-    console.log(vm.user);
-    vm.signUpToday = signUpToday;
+    vm.active = 'home';
 
-    function signUpToday(){
-      $log.debug('signUpToday clicked!');
-    }
-
+    vm.changeCategory = function (category) {
+      $state.go('app.' + category);
+    };
   }
 })();

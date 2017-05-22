@@ -14,6 +14,15 @@
           controller: 'LoginController',
           controllerAs: 'loginCtrl'
         }
+      },
+      resolve: {
+        /** @ngInject */
+        user: function ($state, Auth) {
+          var currentUser = Auth.currentUser;
+          if(currentUser && currentUser.email != null) {
+            $state.go('app.home');
+          }
+        }
       }
     });
   }
