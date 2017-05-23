@@ -6,7 +6,7 @@
     .factory('Auth', AuthFactory);
 
   /** @ngInject */
-  function AuthFactory($q) {
+  function AuthFactory() {
     var vm = this;
     vm.users = localStorage.getItem('userList')?(JSON.parse(localStorage.getItem('userList'))):[];
     vm.factory = {

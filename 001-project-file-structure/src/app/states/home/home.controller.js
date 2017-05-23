@@ -11,10 +11,5 @@
 
     vm.mainTitle = SITE_NAME;
     vm.user = loggedUser;
-    vm.active = 'home';
-
-    vm.changeCategory = function (category) {
-      $state.go('app.' + category);
-    };
   }
 })();

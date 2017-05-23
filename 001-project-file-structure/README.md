@@ -51,8 +51,25 @@ If you want to see the solution, click [here][3].
 ### Next
 * [002 - States, views and params][4]
 
+### Solution: 
+For the implementation of the abstract states and ui-view concepts the app state was created with two ui-views: navbar and content
+and three nested states.
+
+for the ui-views:
+ in the navbar ui-view the navigation bar directive is loaded 
+  in the content ui-view all the three nested states (home, detail and config) are loaded, depending of the url route.
+  
+for the abstract and nested states:
+  on the route file config for each state (home, detail and config) is declared that each state is child of app when declaring $stateProvider.state('app.stateName', {...})
+  
+
+### Next
+* [003 - servers and maps][6]
+
+
  [1]: http://bguiz.github.io/js-standards/angularjs/application-structure-lift-principle/
  [2]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#style-y150
  [3]: https://github.com/talosdigital/u-angularjs/tree/solved/001-projec-file-structure/001-project-file-structure#solution
  [4]: https://github.com/talosdigital/u-angularjs/tree/master/002-routing-params-views
  [5]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md
+ [6]: https://github.com/talosdigital/u-angularjs/blob/master/003-servers-and-maps/README.md

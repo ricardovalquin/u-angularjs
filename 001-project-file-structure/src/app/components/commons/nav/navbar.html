@@ -1,11 +1,11 @@
 <aside class="nav-bar-container animated">
   <div class="logged-user">
-    <p>{{user.email}}</p>
+    <p>{{navCtrl.user.email}}</p>
   </div>
   <div class="nav-categories">
-    <p ng-class="{'active-link': activeLink == 'home'}" ng-click="navCtrl.goToCategory('home')">Home</p>
-    <p ng-class="{'active-link': activeLink == 'detail'}" ng-click="navCtrl.goToCategory('detail')">Detail</p>
-    <p ng-class="{'active-link': activeLink == 'config'}" ng-click="navCtrl.goToCategory('config')">Config</p>
+    <p ng-class="{'active-link': navCtrl.activeLink == 'app.home'}" ng-click="navCtrl.goToCategory('home')">Home</p>
+    <p ng-class="{'active-link': navCtrl.activeLink == 'app.detail'}" ng-click="navCtrl.goToCategory('detail')">Detail</p>
+    <p ng-class="{'active-link': navCtrl.activeLink == 'app.config'}" ng-click="navCtrl.goToCategory('config')">Config</p>
   </div>
   <div class="logout">
     <a class="btn btn-lg btn-primary" role="button" ng-click="navCtrl.logout()">Logout</a>

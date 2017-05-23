@@ -10,19 +10,10 @@
     return {
       restrict: 'E',
       replace: true,
-      scope: {
-        activeLink: '=',
-        user: '=',
-        clickLink: '&'
-      },
+      scope: {},
       templateUrl: 'app/components/commons/nav/navbar.html',
       controller: 'NavBarController',
-      controllerAs: 'navCtrl',
-      link: function(scope) {
-        scope.goToCategory = function(link) {
-          scope.clickLink(link);
-        };
-      }
+      controllerAs: 'navCtrl'
     }
   }
 })();
