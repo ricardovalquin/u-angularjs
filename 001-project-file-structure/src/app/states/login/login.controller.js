@@ -11,8 +11,8 @@
     vm.loginForm = {};
 
     vm.submitForm = function () {
-      LoginService.login(vm.formData).then(function (response) {
-        $state.go('app.home', response);
+      LoginService.login(vm.formData).then(function () {
+        $state.go('app.home');
       }, function (error) {
         $log.error('something went wrong: ' + error);
       });

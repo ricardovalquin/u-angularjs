@@ -3,13 +3,13 @@
 
   angular
     .module('angularEx1')
-    .controller('HomeController', HomeController);
+    .controller('ConfigController', ConfigController);
 
   /** @ngInject */
-  function HomeController(SITE_NAME, loggedUser) {
+  function ConfigController(SITE_NAME, configData) {
     var vm = this;
 
     vm.mainTitle = SITE_NAME;
-    vm.user = loggedUser;
+    vm.configData = configData.data;
   }
 })();

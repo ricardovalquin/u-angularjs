@@ -10,18 +10,13 @@
     $stateProvider.state('app', {
       abstract: true,
       views: {
-        //'nav@' : {
-        //  templateUrl: 'app/components/commons/nav/nav.html',
-        //  controller: 'NavController',
-        //  controllerAs: 'navCtrl'
-        //},
+        'navbar@': {
+          templateUrl: 'app/components/commons/nav/navbar.html',
+          controller: 'NavBarController',
+          controllerAs: 'navCtrl'
+        },
         'content@': {
           templateUrl: 'app/components/commons/content/content.html'
-        },
-        'footer@': {
-          templateUrl: 'app/components/commons/footer/footer.html',
-          controller: 'FooterController',
-          controllerAs: 'footerCtrl'
         }
       }
     });
