@@ -7,7 +7,7 @@
 
   function routeConfig($stateProvider) {
     $stateProvider.state('app.detail', {
-      url: '/detail/:objectId',
+      url: '/detail',
       views: {
         'content@': {
           templateUrl: 'app/states/detail/detail.html',

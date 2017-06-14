@@ -66,6 +66,18 @@ for the abstract and nested states:
 ### Next
 * [003 - servers and maps][6]
 
+### Solution: 
+We implemented the leaflet map service with an event listener to catch the click on the map and get the coordinates.
+Then, the WeatherService implementation is in charge to make the communication with the http://api.openweathermap.org/ API and then we are able to get the weather and radiation information about
+the selected location.
+On the view, there are radio buttons that allows you to choose which environmental variable do you want to know.
+Once this variable is selected you can click on the map and be able to get that information.
+The controller evaluates which variable you want to know and makes the call to the right API endpoint.
+The Service hit the API endpoint and retrieves the data to the controller and the Angular Material $mdDialog service show the results.
+ 
+### Next
+* [004 - directives][7] 
+
 
  [1]: http://bguiz.github.io/js-standards/angularjs/application-structure-lift-principle/
  [2]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#style-y150
@@ -73,3 +85,4 @@ for the abstract and nested states:
  [4]: https://github.com/talosdigital/u-angularjs/tree/master/002-routing-params-views
  [5]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md
  [6]: https://github.com/talosdigital/u-angularjs/blob/master/003-servers-and-maps/README.md
+ [7]: https://github.com/talosdigital/u-angularjs/blob/master/004-directives/README.md
