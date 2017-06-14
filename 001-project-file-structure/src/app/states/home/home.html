@@ -1,6 +1,11 @@
 <section class="home-view d-flex align-items-center">
   <div class="jumbotron">
     <h1 class="display-3">Weather app</h1>
+    <p>Please choose an option to get the info:</p>
+    <md-radio-group ng-model="homeCtrl.weatherVariable">
+      <md-radio-button value="0" class="md-primary">Weather Info</md-radio-button>
+      <md-radio-button value="1" class="md-primary">Radiation Info</md-radio-button>
+    </md-radio-group>
     <leaflet id="map" lf-center="homeCtrl.options.center"
              event-broadcast="homeCtrl.options.events"
              defaults="homeCtrl.options.defaults"
