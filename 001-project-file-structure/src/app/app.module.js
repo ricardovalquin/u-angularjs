@@ -10,6 +10,8 @@
       'ngAria',
       'ngResource',
       'ui.router',
-      'pascalprecht.translate'
+      'pascalprecht.translate',
+      'ui-leaflet',
+      'ngMaterial'
     ]);
 })();

@@ -1,7 +1,9 @@
 {
   "name": "angularEx1",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "ui-leaflet": "^1.0.3"
+  },
   "scripts": {
     "test": "gulp test"
   },
