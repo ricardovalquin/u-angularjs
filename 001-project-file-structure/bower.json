@@ -16,7 +16,8 @@
     "bootstrap": "v4.0.0-alpha.6",
     "angular-translate": "^2.15.1",
     "ui-leaflet": "^2.0.0",
-    "angular-material": "^1.1.4"
+    "angular-material": "^1.1.4",
+    "md-color-picker": "^0.2.6"
   },
   "devDependencies": {
     "angular-mocks": "~1.5.3"

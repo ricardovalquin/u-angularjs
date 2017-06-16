@@ -1,0 +1,45 @@
+.preview-card {
+  font-size: 0;
+
+  .img-wp {
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    width: 50%;
+    img {
+      width: 100%;
+    }
+
+    .tag-icon {
+      border-radius: 50%;
+      height: 40px;
+      position: absolute;
+      right: 0;
+      top: -10px;
+      width: 40px;
+      background-color: #00a7b5;
+
+      .icon {
+        color: white;
+        font-size: 20px;
+        left: 50%;
+        margin-left: -10px;
+        margin-top: -10px;
+        position: absolute;
+        top: 50%;
+      }
+    }
+  }
+
+  .card-content-wp {
+    font-size: 10px;
+    display: inline-block;
+    padding: 10px;
+    vertical-align: top;
+    width: 50%;
+
+    .card-title, .description-text {
+      margin-bottom: 20px;
+    }
+  }
+}

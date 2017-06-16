@@ -11,6 +11,7 @@
     vm.activeLink = $state.current.name;
     vm.user = Auth.currentUser();
     vm.goToCategory = function(category) {
+      vm.activeLink = 'app.' + category;
       $state.go('app.' + category);
     };
 

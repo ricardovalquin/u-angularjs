@@ -1,7 +1,36 @@
 <section class="home-view d-flex align-items-center">
   <div class="jumbotron">
-    <h1 class="display-3">{{detailCtrl.mainTitle}}</h1>
-    <h2>Detail view</h2>
-    <p class="lead">This is just a test for the detail view using nested states.</p>
+    <h1 class="display-3">Card generator</h1>
+    <p class="lead">This is the ultra card generator.</p>
+    <div class="generator-container">
+      <div class="editor">
+        <div md-color-picker="detailCtrl.colorOptions" label="Select a textcolor" ng-model="detailCtrl.textColor"></div>
+        <div md-color-picker="detailCtrl.colorOptions" label="Select a background color" ng-model="detailCtrl.backgroundColor"></div>
+        <md-input-container>
+          <label>Title</label>
+          <input type="text" ng-model="detailCtrl.titleText" required md-maxlength="30">
+        </md-input-container>
+        <md-input-container>
+          <label>Some description</label>
+          <input type="text" ng-model="detailCtrl.descriptionTex" required md-maxlength="60">
+        </md-input-container>
+
+        <md-radio-group ng-model="selected">
+          <md-radio-button value="1" aria-label="Label 1">
+            Label 1
+          </md-radio-button>
+
+          <md-radio-button ng-value="specialValue" aria-label="Green">
+            Green
+          </md-radio-button>
+
+        </md-radio-group>
+      </div>
+      <div class="card-preview-container">
+        <card-generator icon="asdf" text-color="detailCtrl.textColor" background-color="detailCtrl.backgroundColor"
+                        title="detailCtrl.titleText" description-text="detailCtrl.descriptionTex"></card-generator>
+      </div>
+    </div>
+
   </div>
 </section>
