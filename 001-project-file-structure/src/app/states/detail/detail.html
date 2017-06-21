@@ -12,25 +12,35 @@
         </md-input-container>
         <md-input-container>
           <label>Some description</label>
-          <input type="text" ng-model="detailCtrl.descriptionTex" required md-maxlength="60">
+          <input type="text" ng-model="detailCtrl.descriptionText" required md-maxlength="60">
         </md-input-container>
-
-        <md-radio-group ng-model="selected">
-          <md-radio-button value="1" aria-label="Label 1">
-            Label 1
+        <md-radio-group ng-model="detailCtrl.icon" class="icon-selector-wp">
+          <md-radio-button value="1">
+            <i class="fa fa-commenting-o"></i>
           </md-radio-button>
-
-          <md-radio-button ng-value="specialValue" aria-label="Green">
-            Green
+          <md-radio-button value="2">
+            <i class="fa fa-bed"></i>
           </md-radio-button>
-
+          <md-radio-button  value="3">
+            <i class="fa fa-music"></i>
+          </md-radio-button>
         </md-radio-group>
+
+        <div class="favorites-wp" ng-show="detailCtrl.favoriteDesigns.length > 0">
+          <p>Those are your favorite and awesome card designs that you store!!!!</p>
+          <md-radio-group ng-model="detailCtrl.selectedFavorite" ng-change="loadFavorite(detailCtrl.selectedFavorite)">
+            <md-radio-button ng-repeat="card in detailCtrl.favoriteDesigns track by $index" ng-value="detailCtrl.favoriteDesigns[$index]"
+                             ng-model="detailCtrl.favoriteDesigns[$index]"
+                             ng-change="loadFavorite(detailCtrl.favoriteDesigns[$index])">
+              {{card.title}}
+            </md-radio-button>
+          </md-radio-group>
+        </div>
       </div>
       <div class="card-preview-container">
-        <card-generator icon="asdf" text-color="detailCtrl.textColor" background-color="detailCtrl.backgroundColor"
-                        title="detailCtrl.titleText" description-text="detailCtrl.descriptionTex"></card-generator>
+        <card-generator icon="detailCtrl.icon" text-color="detailCtrl.textColor" background-color="detailCtrl.backgroundColor"
+                        title="detailCtrl.titleText" description-text="detailCtrl.descriptionText" favorite="detailCtrl.selectCard(obj)"></card-generator>
       </div>
     </div>
-
   </div>
 </section>

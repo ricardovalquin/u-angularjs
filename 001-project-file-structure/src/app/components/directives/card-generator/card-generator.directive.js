@@ -15,19 +15,24 @@
         textColor: '=',
         backgroundColor:'=',
         title: '=',
-        descriptionText: '='
+        descriptionText: '=',
+        favorite: '&'
+
       },
       templateUrl: 'app/components/directives/card-generator/card-generator.html',
-      controller: CardGeneratorController,
-      controllerAs: 'cardGenCtrl',
       link: function ($scope) {
-        var card = angular.element(document.querySelector('.preview'));
-        card.css('background-color', $scope.backgroundColor);
-        card.css('color', $scope.textColor);
+        $scope.markAsFavorite = function() {
+          var configObj = {
+            icon: $scope.icon,
+            textColor: $scope.textColor,
+            backgroundColor: $scope.backgroundColor,
+            title: $scope.title,
+            descriptionText: $scope.descriptionText
+          };
+          $scope.favorite({obj: configObj});
+        };
 
       }
     };
-    /** @ngInject */
-    function CardGeneratorController($scope) {}
   }
 })();
