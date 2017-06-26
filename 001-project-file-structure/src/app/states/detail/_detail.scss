@@ -1,44 +1,44 @@
-.generator-container {
-  font-size: 0;
-
-  .editor, .card-preview-container {
-    color: black;
-    display: inline-block;
-    font-size: 10px;
-    vertical-align: top;
-    width: 50%;
-
-    @media screen and (max-width: 992px) {
-      display: block;
-      margin-bottom: 20px;
-      width: 100%;
-    }
-  }
-
-  .editor {
-    @media screen and (max-width: 992px) {
-      max-width: 400px;
-      margin: 0 auto 20px;
-    }
-
-    md-input-container {
-      width: 100%;
-    }
-  }
-
-  .card-preview-container {
-    background-color: #ffffff;
-    -webkit-box-shadow: 1px 1px 20px 6px rgba(0, 0, 0, 0.19);
-    -moz-box-shadow: 1px 1px 20px 6px rgba(0, 0, 0, 0.19);
-    box-shadow: 1px 1px 20px 6px rgba(0, 0, 0, 0.19);
-    border: 1px solid #cccccc;
-  }
-
-  .icon-selector-wp {
-    md-radio-button {
-      font-size: 20px;
-      display: inline-block;
-      margin-right: 15px;
-    }
-  }
-}
+//.generator-container {
+//  font-size: 0;
+//
+//  .editor, .card-preview-container {
+//    color: black;
+//    display: inline-block;
+//    font-size: 10px;
+//    vertical-align: top;
+//    width: 50%;
+//
+//    @media screen and (max-width: 992px) {
+//      display: block;
+//      margin-bottom: 20px;
+//      width: 100%;
+//    }
+//  }
+//
+//  .editor {
+//    @media screen and (max-width: 992px) {
+//      max-width: 400px;
+//      margin: 0 auto 20px;
+//    }
+//
+//    md-input-container {
+//      width: 100%;
+//    }
+//  }
+//
+//  .card-preview-container {
+//    background-color: #ffffff;
+//    -webkit-box-shadow: 1px 1px 20px 6px rgba(0, 0, 0, 0.19);
+//    -moz-box-shadow: 1px 1px 20px 6px rgba(0, 0, 0, 0.19);
+//    box-shadow: 1px 1px 20px 6px rgba(0, 0, 0, 0.19);
+//    border: 1px solid #cccccc;
+//  }
+//
+//  .icon-selector-wp {
+//    md-radio-button {
+//      font-size: 20px;
+//      display: inline-block;
+//      margin-right: 15px;
+//    }
+//  }
+//}
