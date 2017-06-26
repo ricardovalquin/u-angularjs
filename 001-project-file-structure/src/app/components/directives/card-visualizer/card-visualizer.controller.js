@@ -3,10 +3,10 @@
 
   angular
     .module('angularEx1')
-    .controller('cardController', cardController);
+    .controller('cardVisualizerController', cardVisualizerController);
 
   /** @ngInject */
-  function cardController() {
+  function cardVisualizerController() {
     var vm = this;
 
     vm.markAsFavorite = function () {

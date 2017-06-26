@@ -3,9 +3,9 @@
 
   angular
     .module('angularEx1')
-    .component('cardGenerator', {
-      templateUrl: 'app/components/directives/card-generator/card-generator.html',
-      controller: 'cardController',
+    .component('cardVisualizer', {
+      templateUrl: 'app/components/directives/card-visualizer/card-visualizer.html',
+      controller: 'cardVisualizerController',
       controllerAs: 'cardCtrl',
       bindings: {
         icon: '=',
