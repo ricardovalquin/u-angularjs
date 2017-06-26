@@ -12,6 +12,7 @@
       'ui.router',
       'pascalprecht.translate',
       'ui-leaflet',
-      'ngMaterial'
+      'ngMaterial',
+      'mdColorPicker'
     ]);
 })();

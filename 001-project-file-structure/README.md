@@ -78,6 +78,16 @@ The Service hit the API endpoint and retrieves the data to the controller and th
 ### Next
 * [004 - directives][7] 
 
+### Solution:
+For the directives implementation, under components/directives/card-generator is located the files used for the card visualizer directive
+This directive works with 6 parameters, which are: icon, textColor, backgroundColor, title, descriptionText, and the last one that is a function: favorite
+The directive is setup as an element and all the attributes are mandatory, once you place it and bring all the parameters
+is going to render it on the card visualizer.
+When you click on the star on the top right corner, the favorite function is going to be trigered and is going to send an object containing
+all the variables to be added to the favorites list.
+
+### Next
+* [005 - components][8]
 
  [1]: http://bguiz.github.io/js-standards/angularjs/application-structure-lift-principle/
  [2]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#style-y150
@@ -86,3 +96,4 @@ The Service hit the API endpoint and retrieves the data to the controller and th
  [5]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md
  [6]: https://github.com/talosdigital/u-angularjs/blob/master/003-servers-and-maps/README.md
  [7]: https://github.com/talosdigital/u-angularjs/blob/master/004-directives/README.md
+ [8]: https://github.com/talosdigital/u-angularjs/blob/master/005-components/README.md
