@@ -89,6 +89,18 @@ all the variables to be added to the favorites list.
 ### Next
 * [005 - components][8]
 
+### Solution:
+The implementation of an application based on components is really simple, the main idea is to write isolated blocks of code
+(html, controller and route files) to be able to re use this code in an other app. 
+under the app/states folder there are the home component with his files (html, component declaration, route, and component controller)
+in the route files is declared the component that we are going to use for an specific state, in this case the home component.
+Then, AngularJS search for this component that is located on the home.component.js file, where we specify the templateUrl, controller and controllerAs
+variables for the component. 
+For the card-generator-component is the same files configurations that the home one.
+The only change on the card-generator-component is that the visualizer now is a component to, instead of a directive.
+for the visualizer component, the difference from the other ones is that this one is an html element and does not have route file.
+ other than that, on the declaration of the component, we specify the binding (attributes that is going to get from the parent component )
+
  [1]: http://bguiz.github.io/js-standards/angularjs/application-structure-lift-principle/
  [2]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#style-y150
  [3]: https://github.com/talosdigital/u-angularjs/tree/solved/001-projec-file-structure/001-project-file-structure#solution

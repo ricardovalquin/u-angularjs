@@ -1,0 +1,21 @@
+<div class="preview">
+  <div class="preview-card" ng-style="{'background-color': cardCtrl.backgroundColor}">
+    <div class="img-wp">
+      <img src="/assets/images/peluca.png" alt="peluca">
+      <span class="tag-icon" ng-style="{'background-color': cardCtrl.textColor}">
+        <i class="icon fa"
+           ng-class="{'fa-commenting-o': cardCtrl.icon == 1,
+           'fa-bed': cardCtrl.icon == 2,
+           'fa-music': cardCtrl.icon == 3}"></i>
+      </span>
+    </div>
+    <div class="card-content-wp">
+      <div class="favorite-wp" ng-click="cardCtrl.markAsFavorite()">
+        <i class="favorite-btn fa fa-star"></i>
+      </div>
+      <h1 class="card-title" ng-style="{color: cardCtrl.textColor}">{{cardCtrl.title}}</h1>
+      <p class="description-text" ng-style="{color: cardCtrl.textColor}">{{cardCtrl.descriptionText}}</p>
+      <p class="hard-coded-message">This is a hard coded message?</p>
+    </div>
+  </div>
+</div>

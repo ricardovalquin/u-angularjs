@@ -3,10 +3,10 @@
 
   angular
     .module('angularEx1')
-    .controller('DetailController', DetailController);
+    .controller('GeneratorController', GeneratorController);
 
   /** @ngInject */
-  function DetailController(SITE_NAME) {
+  function GeneratorController(SITE_NAME) {
     var vm = this;
 
     vm.mainTitle = SITE_NAME;

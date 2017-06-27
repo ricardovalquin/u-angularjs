@@ -3,10 +3,10 @@
 
   angular
     .module('angularEx1')
-    .controller('HomeController', HomeController);
+    .controller('HomeComponentController', HomeComponentController);
 
   /** @ngInject */
-  function HomeController($scope, $mdDialog, SITE_NAME, loggedUser, WeatherService) {
+  function HomeComponentController($scope, $mdDialog, SITE_NAME, WeatherService) {
     var vm = this;
     var latlng = null;
     var coordinates = {
@@ -15,7 +15,6 @@
     };
 
     vm.mainTitle = SITE_NAME;
-    vm.user = loggedUser;
     vm.weatherVariable = 0;
     vm.options = {
       center: {

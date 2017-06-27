@@ -8,13 +8,7 @@
   function routeConfig($stateProvider) {
     $stateProvider.state('app.home', {
       url: '/home/',
-      views: {
-        'content@': {
-          templateUrl: 'app/states/home/home.html',
-          controller: 'HomeController',
-          controllerAs: 'homeCtrl'
-        }
-      },
+      component: 'home',
       resolve: {
         /** @ngInject */
         loggedUser: function ($state, Auth) {
