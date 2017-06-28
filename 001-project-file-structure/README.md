@@ -101,6 +101,17 @@ The only change on the card-generator-component is that the visualizer now is a 
 for the visualizer component, the difference from the other ones is that this one is an html element and does not have route file.
  other than that, on the declaration of the component, we specify the binding (attributes that is going to get from the parent component )
 
+
+### Next
+* [006-basic-testing][9]
+
+### Solution:
+For the implementation of the tests for each test file (**/*.spec.js) we have the before each where the dependencies are loaded.
+Dependencies like the controller, $rootScope, $q, and so one. Also, all the necessary mocks are created.
+Note that all those element are wrapped on an object called suite, this object is cleaned after each test and set to null after all the tests that belongs to this file
+for the Weather service there are two suites, one for the getWeather endpoint and another one for the getRadiation endpoint, in each on one we test the success call and the failed one  
+for the weather controller (home-component.controller.spec.js file) there is only one suite that covers the click on the map when get radiation or get weather is selected.
+
  [1]: http://bguiz.github.io/js-standards/angularjs/application-structure-lift-principle/
  [2]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#style-y150
  [3]: https://github.com/talosdigital/u-angularjs/tree/solved/001-projec-file-structure/001-project-file-structure#solution
@@ -109,3 +120,4 @@ for the visualizer component, the difference from the other ones is that this on
  [6]: https://github.com/talosdigital/u-angularjs/blob/master/003-servers-and-maps/README.md
  [7]: https://github.com/talosdigital/u-angularjs/blob/master/004-directives/README.md
  [8]: https://github.com/talosdigital/u-angularjs/blob/master/005-components/README.md
+ [9]: https://github.com/talosdigital/u-angularjs/blob/master/006-basic-testing/README.md
