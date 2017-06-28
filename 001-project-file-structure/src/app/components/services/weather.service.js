@@ -12,12 +12,10 @@
     var apiKey = WEATHER_API_KEY;
     var weatherResource = 'data/2.5/weather';
     var radiationResource = 'v3/uvi/';
-    var pollutionResource = 'pollution/v1/co';
 
     return {
       getWeather: getWeather,
-      getRadiation: getRadiation,
-      getPollution: getPollution
+      getRadiation: getRadiation
     };
 
     function getWeather(coordinates) {
@@ -41,20 +39,7 @@
       var params = {
         APPID: apiKey
       };
-      return $http.get(baseUrl + radiationResource + '/' + coordinates.location + '/'  + 'current.json',
-        {params: params}).then(function (response) {
-        return response.data;// .data is the value
-      });
-    }
-
-    function getPollution(coordinates) {
-      if(!coordinates.location) {
-        return $q.reject('Location coordinates are required');
-      }
-      var params = {
-        APPID: apiKey
-      };
-      return $http.get(baseUrl + pollutionResource + '/' + coordinates.location + '/' + 'current.json',
+      return $http.get(baseUrl + radiationResource + coordinates.location + '/'  + 'current.json',
         {params: params}).then(function (response) {
         return response.data;// .data is the value
       });
