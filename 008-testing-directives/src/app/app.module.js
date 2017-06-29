@@ -11,7 +11,8 @@
       'ngResource',
       'ui.router',
       'ngMaterial',
-      'mdColorPicker'
+      'mdColorPicker',
+      'ngAnimate'
     ]);
 })();
 
