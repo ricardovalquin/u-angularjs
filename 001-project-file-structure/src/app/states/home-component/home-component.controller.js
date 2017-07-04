@@ -40,14 +40,10 @@
         ok: 'Close'
       });
 
-      $mdDialog
-        .show(alert)
-        .finally(function () {
-          alert = undefined;
-        });
+      $mdDialog.show(alert);
     }
 
-    var clickOnMap = $scope.$on('leafletDirectiveMap.map.click', function (event, args) {
+    vm.evaluateClick = function (event, args) {
       latlng = args.leafletEvent.latlng;
       vm.weatherVariable = parseInt(vm.weatherVariable);
       vm.options.markers = {medellin: {lat: latlng.lat, lng: latlng.lng}};
@@ -79,7 +75,11 @@
           });
           break;
       }
-    });
+    };
+
+    var clickOnMap = $scope.$on('leafletDirectiveMap.map.click', vm.evaluateClick);
+
+
 
 
     $scope.$on('$destroy', function () {
